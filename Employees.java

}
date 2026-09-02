@@ -1,3 +1,34 @@
 public class Employees {
+    static String companyName = "TCS"; 
+    
+    private int leaveBalance;
+    private String employeeRole;
+    String employeeName;
+    int employeeAge;
+    String employeeLocation;
+    String companyBranch;
 
+    // Constructor
+    public Employees(String employeeName, int employeeAge, String employeeLocation, String companyBranch) {
+        this.employeeName = employeeName;
+        this.employeeAge = employeeAge;
+        this.employeeLocation = employeeLocation;
+        this.companyBranch = companyBranch;
+    }
+
+    public int getLeaveBalance() {
+        return leaveBalance; 
+    }
+
+    public String getEmployeeRole() {
+        return employeeRole;
+    }
+
+    public void setLeaveBalance(int balance) {
+        this.leaveBalance = balance;
+    }
+
+    public void setEmployeeRole(String role) {
+        this.employeeRole = role;
+    }
 }
