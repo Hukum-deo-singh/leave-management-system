@@ -1,5 +1,7 @@
 public class Employees {
+
     static String companyName = "TCS"; 
+    static int totalObjectCount = 0;
     
     private int leaveBalance;
     private String employeeRole;
@@ -8,12 +10,14 @@ public class Employees {
     String employeeLocation;
     String companyBranch;
 
-    // Constructor
     public Employees(String employeeName, int employeeAge, String employeeLocation, String companyBranch) {
         this.employeeName = employeeName;
         this.employeeAge = employeeAge;
         this.employeeLocation = employeeLocation;
         this.companyBranch = companyBranch;
+        
+        totalObjectCount += 1;
+       
     }
 
     public int getLeaveBalance() {
@@ -31,4 +35,13 @@ public class Employees {
     public void setEmployeeRole(String role) {
         this.employeeRole = role;
     }
-}
+    
+    void getEmployeeData(){
+         // Fixed: Dynamically printing the companyName variable
+         System.out.println("Company Name : " + companyName); 
+         System.out.println("Employee Role: " + employeeRole);
+         System.out.println("Employee Name: " + employeeName);
+         System.out.println("Employee Age : " + employeeAge);
+         System.out.println("Location     : " + employeeLocation);
+         System.out.println("Branch       : " + companyBranch);
+    }
